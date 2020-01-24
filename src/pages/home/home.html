@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Aluguéis de Carros
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<!-- Corpo da página-->
+<ion-content padding>
+  <!-- agrupa os itens da lista-->
+ <ion-list>
+
+  <ion-item-group>
+    <ion-item-divider color="light">
+      <ion-icon name="checkmark-circle"></ion-icon>
+        Carros Disponíveis
+      
+    </ion-item-divider>
+    <ion-item *ngFor="let carro of carros" (click)="selecionaCarro(carro)">
+      <h2><ion-icon name="car-outline"></ion-icon>
+        {{carro.nome}}</h2>
+      <p>R$ {{carro.preco}}</p>
+    </ion-item>
+  </ion-item-group>
+
+  
+ </ion-list>
+
+</ion-content>
+
