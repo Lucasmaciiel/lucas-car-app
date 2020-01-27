@@ -4,8 +4,7 @@ import { Carro } from '../home/modelos/carro';
 import { AgendamentosServiceProvider } from '../../providers/agendamentos-service/agendamentos-service';
 import { HomePage } from '../home/home';
 import { Agendamento } from '../home/modelos/agendamento';
-import { Storage } from '@ionic/storage'
-import { Observable } from 'rxjs/Observable';
+import { AgendamentoDaoProvider } from '../../providers/agendamento-dao/agendamento-dao';
 
 
 @IonicPage()
@@ -28,7 +27,7 @@ export class CadastroPage {
     public navParams: NavParams,
     private _alertContrl: AlertController,
     private _agendamentosService: AgendamentosServiceProvider,
-    private _storage: Storage) {
+    private _agendamentoDao: AgendamentoDaoProvider) {
 
     this.carro = this.navParams.get('carroSelecionado');
     this.precoTotal = this.navParams.get('precoTotal');
@@ -60,7 +59,8 @@ export class CadastroPage {
       modeloCarro: this.carro.nome,
       precoTotal: this.precoTotal,
       confirmado: false,
-      enviado: false
+      enviado: false,
+      data: this.data
     };
 
     this._alerta = this._alertContrl.create({
@@ -77,10 +77,16 @@ export class CadastroPage {
 
     let mensagem = ''; // recebe a mensagem de sucesso ou de erro
 
-    this._agendamentosService.agenda(agendamento)
+    this._agendamentoDao.ehDuplicado(agendamento)
+      .mergeMap(ehDuplicado => {
+        if(ehDuplicado) {
+          throw new Error('Agendamento existente!');
+        }
+        return this._agendamentosService.agenda(agendamento)
+      })
       .mergeMap((valor) => { 
 
-        let observable = this.salvar(agendamento);
+        let observable = this._agendamentoDao.salvar(agendamento);
         if (valor instanceof Error) {
           throw valor;
         }
@@ -98,11 +104,5 @@ export class CadastroPage {
       );
   }
 
-  salvar(agendamento) {
-    let chave = this.email + this.data.substr(0, 10);
-    let promise = this._storage.set(chave, agendamento);
-
-    return Observable.fromPromise(promise);
-  }
 
 }

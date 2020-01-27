@@ -6,6 +6,7 @@ emailCliente: string,
 modeloCarro: string,
 precoTotal: number,
 confirmado: boolean,
-enviado: boolean
+enviado: boolean,
+data: String
 
 }
