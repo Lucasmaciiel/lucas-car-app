@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+
 1º instale o ionic e o cordova
 npm install -g ionic@3.16.0 cordova@7.0.1 --save-exact
 
@@ -68,5 +69,5 @@ Substitute ios for android if not on a Mac.
 
 =======
 # lucar-car
-Projeto em Ionic
+Projeto em Ionic 
 >>>>>>> 421ebb03580a1fcae6ba53852e87bf430ce1f381
