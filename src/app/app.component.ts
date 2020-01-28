@@ -9,8 +9,8 @@ import { ListaAgendamentosPage } from '../pages/lista-agendamentos/lista-agendam
   templateUrl: 'app.html'
 })
 export class MyApp {
-  //rootPage:any = HomePage;
-  rootPage:any = ListaAgendamentosPage.name;
+  rootPage:any = HomePage;
+  //rootPage:any = ListaAgendamentosPage.name;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {

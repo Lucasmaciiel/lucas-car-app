@@ -5,6 +5,7 @@ import { AgendamentosServiceProvider } from '../../providers/agendamentos-servic
 import { HomePage } from '../home/home';
 import { Agendamento } from '../home/modelos/agendamento';
 import { AgendamentoDaoProvider } from '../../providers/agendamento-dao/agendamento-dao';
+import { DecimalPipe } from '@angular/common';
 
 
 @IonicPage()
@@ -28,9 +29,8 @@ export class CadastroPage {
     private _alertContrl: AlertController,
     private _agendamentosService: AgendamentosServiceProvider,
     private _agendamentoDao: AgendamentoDaoProvider) {
-
     this.carro = this.navParams.get('carroSelecionado');
-    this.precoTotal = this.navParams.get('precoTotal');
+    this.precoTotal =  this.navParams.get('precoTotal');
 
   }
 
