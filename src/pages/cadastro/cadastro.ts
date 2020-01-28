@@ -46,12 +46,6 @@ export class CadastroPage {
 
       return;
     }
-
-    /*  console.log(this.nome);
-      console.log(this.endereco);
-      console.log(this.email);
-      console.log(this.data); */
-
     let agendamento: Agendamento = {
       nomeCliente: this.nome,
       enderecoCliente: this.endereco,
@@ -79,19 +73,19 @@ export class CadastroPage {
 
     this._agendamentoDao.ehDuplicado(agendamento)
       .mergeMap(ehDuplicado => {
-        if(ehDuplicado) {
+        if (ehDuplicado) {
           throw new Error('Agendamento existente!');
         }
         return this._agendamentosService.agenda(agendamento);
       })
-      .mergeMap((valor) => { 
+      .mergeMap((valor) => {
 
         let observable = this._agendamentoDao.salvar(agendamento);
         if (valor instanceof Error) {
           throw valor;
         }
         return observable;
-        
+
       })
       .finally(() => {
         this._alerta.setSubTitle(mensagem);
