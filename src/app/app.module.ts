@@ -19,6 +19,7 @@ import 'rxjs/add/operator/catch';
 import { IonicStorageModule} from '@ionic/storage';
 import { AgendamentoDaoProvider } from '../providers/agendamento-dao/agendamento-dao';
 
+
 @NgModule({
   declarations: [
     MyApp,
@@ -45,7 +46,8 @@ import { AgendamentoDaoProvider } from '../providers/agendamento-dao/agendamento
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     CarrosServiceProvider,
     AgendamentosServiceProvider,
-    AgendamentoDaoProvider
+    AgendamentoDaoProvider,
+    
   ]
 })
 export class AppModule {}

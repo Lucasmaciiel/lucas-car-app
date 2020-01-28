@@ -33,6 +33,8 @@ ionic g page nome_da_pagina
 9º rodar a API
 npm start
 
+----------------
+após criar uma página, ir no module, e criar um exports da mesma
 http://localhost:8080/api/carro/listaTodos
 
 http://localhost:8100/ionic-lab
