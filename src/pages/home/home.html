@@ -4,31 +4,30 @@
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>
-      LucasCar 
+      LucasCar
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <!-- Corpo da página-->
-<ion-content  class="background" padding >
+<ion-content class="background" padding>
   <!-- agrupa os itens da lista-->
- <ion-list>
+  <ion-list>
 
-  <ion-item-group>
-    <ion-item-divider color="light">
+    <ion-item-group>
+      <ion-item-divider color="light">
         Carros Disponíveis
         <ion-icon name="checkmark-circle"></ion-icon>
-      
-    </ion-item-divider>
-    <ion-item *ngFor="let carro of carros" (click)="selecionaCarro(carro)">
-      <h2><ion-icon name="ios-car-outline"></ion-icon>
-        {{carro.nome}}</h2>
-      <p>R$ {{carro.preco}}</p>
-    </ion-item>
-  </ion-item-group>
 
-  
- </ion-list>
+      </ion-item-divider>
+      <ion-item *ngFor="let carro of carros" (click)="selecionaCarro(carro)">
+        <h2>
+          {{carro.nome}}</h2>
+        <p>R$ {{carro.preco}}</p>
+      </ion-item>
+    </ion-item-group>
+
+
+  </ion-list>
 
 </ion-content>
-
