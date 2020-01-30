@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController, Alert } from 'ionic-angular';
 import { AgendamentoDaoProvider } from '../../providers/agendamento-dao/agendamento-dao';
 import { Agendamento } from '../home/modelos/agendamento';
-import { HomePage } from '../home/home';
 import { AgendamentosServiceProvider } from '../../providers/agendamentos-service/agendamentos-service';
 
 @IonicPage()
@@ -62,6 +61,10 @@ export class ListaAgendamentosPage {
         () => mensagem = 'Agendamento reenviado',
         (err: Error) => mensagem = err.message
       );
+  }
+
+  excluiAgendamento(agendamento: Agendamento) {
+    // implementar
   }
 
 }

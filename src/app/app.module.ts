@@ -19,6 +19,7 @@ import 'rxjs/add/operator/catch';
 import { IonicStorageModule} from '@ionic/storage';
 import { AgendamentoDaoProvider } from '../providers/agendamento-dao/agendamento-dao';
 import { LoginPage } from '../pages/login/login';
+import { UsuariosServiceProvider } from '../providers/usuarios-service/usuarios-service';
 
 
 @NgModule({
@@ -50,6 +51,7 @@ import { LoginPage } from '../pages/login/login';
     CarrosServiceProvider,
     AgendamentosServiceProvider,
     AgendamentoDaoProvider,
+    UsuariosServiceProvider,
     
   ]
 })
