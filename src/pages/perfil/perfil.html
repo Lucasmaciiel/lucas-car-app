@@ -1,13 +1,40 @@
-
 <ion-header>
 
   <ion-navbar>
-    <ion-title>perfil</ion-title>
+    <ion-title>Perfil</ion-title>
   </ion-navbar>
 
 </ion-header>
 
+<ion-content>
+  <ion-item no-lines>
+    <div class="avatar-wrapper">
+    <ion-avatar>
+      <img src="assets/img/avatar-profile.jpg">
+    </ion-avatar>
+    <button class="btn-tirar-foto" ion-button icon-only round>
+      <ion-icon name="camera"></ion-icon>
+    </button>
+  </div>
+  </ion-item>
 
-<ion-content padding>
+  <ion-card>
+    <ion-item>
+      <ion-icon name="contact" item-left></ion-icon>
+      Lucas Maciel
+    </ion-item>
+    <ion-item>
+      <ion-icon name="calendar" item-left></ion-icon>
+      <p>27/06/1991</p>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="at" item-left></ion-icon>
+      <p>lucas.maciel@totvs.com.br</p>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="call" item-left></ion-icon>
+      <p>(18) 997062411</p>
+    </ion-item>
+  </ion-card>
 
 </ion-content>
