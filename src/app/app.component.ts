@@ -3,9 +3,9 @@ import { Platform, Nav } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { HomePage } from '../pages/home/home';
 import { ListaAgendamentosPage } from '../pages/lista-agendamentos/lista-agendamentos';
 import { LoginPage } from '../pages/login/login';
+import { PerfilPage } from '../pages/perfil/perfil';
 @Component({
   selector: 'myapp',
   templateUrl: 'app.html'
@@ -15,7 +15,8 @@ export class MyApp {
   rootPage:any = LoginPage;
 
    public paginas = [
-    { titulo: 'Agendamentos' , componente: ListaAgendamentosPage.name, icone: 'calendar'}
+    { titulo: 'Agendamentos' , componente: ListaAgendamentosPage.name, icone: 'calendar'},
+    { titulo: 'Perfil' , componente: PerfilPage.name, icone: 'person'}
    ];
 
 

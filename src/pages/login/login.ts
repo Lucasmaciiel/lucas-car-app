@@ -28,7 +28,6 @@ export class LoginPage {
       .efetuaLogin(this.email, this.senha)
       .subscribe(
         (usuario: Usuario) => { // callback de sucesso
-          console.log(usuario);
           this.navCtrl.setRoot(HomePage);
         },
         () => {
@@ -42,9 +41,6 @@ export class LoginPage {
 
         }
       )
-
-
-
   }
 
 }

@@ -5,7 +5,6 @@ import { AgendamentosServiceProvider } from '../../providers/agendamentos-servic
 import { HomePage } from '../home/home';
 import { Agendamento } from '../home/modelos/agendamento';
 import { AgendamentoDaoProvider } from '../../providers/agendamento-dao/agendamento-dao';
-import { DecimalPipe } from '@angular/common';
 
 
 @IonicPage()
