@@ -21,6 +21,7 @@ import { AgendamentoDaoProvider } from '../providers/agendamento-dao/agendamento
 import { LoginPage } from '../pages/login/login';
 import { UsuariosServiceProvider } from '../providers/usuarios-service/usuarios-service';
 import { ApiServiceProvider } from '../providers/api-service/api-service';
+import { Vibration } from '@ionic-native/vibration';
 
 
 @NgModule({
@@ -54,6 +55,7 @@ import { ApiServiceProvider } from '../providers/api-service/api-service';
     AgendamentoDaoProvider,
     UsuariosServiceProvider,
     ApiServiceProvider,
+    Vibration
     
   ]
 })
