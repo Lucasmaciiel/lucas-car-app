@@ -31,6 +31,16 @@ ionic g page nome_da_pagina
 9º rodar a API
 npm start
 
+ionic cordova plugin add cordova-plugin-datepicker@0.9  --> instala plugin do datepicker
+npm install --save @ionic-native/date-picker
+
+ionic cordova platform add android --> instala a plataforma android
+ionic cordova platform add ios --> instala a plataforma ios 
+
+ionic cordova build android  --> faz o build da aplicacao e gera o apk na pasta da plataforma
+ionic cordova build ios  --> (somente faz o build se estiver no mac)faz o build da aplicacao e gera o apk na pasta da plataforma
+
+ionic cordova run android --> faz o build e instala direto no dispositivo 
 ----------------
 após criar uma página, ir no module, e criar um exports da mesma
 http://localhost:8080/api/carro/listaTodos

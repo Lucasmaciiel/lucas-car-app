@@ -5,7 +5,8 @@ import { AgendamentosServiceProvider } from '../../providers/agendamentos-servic
 import { HomePage } from '../home/home';
 import { Agendamento } from '../home/modelos/agendamento';
 import { AgendamentoDaoProvider } from '../../providers/agendamento-dao/agendamento-dao';
-import { Vibration } from '@ionic-native/vibration';
+import { Vibration } from '@ionic-native/vibration/ngx';
+import { DatePicker } from '@ionic-native/date-picker/ngx';
 
 @IonicPage()
 @Component({
@@ -28,12 +29,25 @@ export class CadastroPage {
     private _alertContrl: AlertController,
     private _agendamentosService: AgendamentosServiceProvider,
     private _agendamentoDao: AgendamentoDaoProvider,
-    private _vibration: Vibration) {
+    private _vibration: Vibration,
+    private _datePicker: DatePicker
+    ) {
     this.carro = this.navParams.get('carroSelecionado');
     this.precoTotal =  this.navParams.get('precoTotal');
-
   }
-
+  /*selecionaData(){
+      this._datePicker.show({
+      date: new Date(),
+      mode: 'date',
+      androidTheme: this._datePicker.ANDROID_THEMES.THEME_TRADITIONAL}).then ( data => this.data = data.toISOString());
+  } */
+  selecionaData() {
+    this._datePicker.show({
+        date: new Date(),
+        mode: 'date'
+    })
+    .then( data => this.data = data.toISOString() );
+}
   agenda() {
     if (!this.nome || !this.endereco || !this.email) {
       this._vibration.vibrate(500);
@@ -98,6 +112,8 @@ export class CadastroPage {
         (err: Error) => mensagem = err.message
       );
   }
+
+  
 
 
 }

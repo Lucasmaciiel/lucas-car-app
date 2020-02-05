@@ -16,13 +16,13 @@ import 'rxjs/add/observable/fromPromise';
 import 'rxjs/add/observable/of';
 import 'rxjs/add/operator/catch';
 
-import { IonicStorageModule} from '@ionic/storage';
+import { IonicStorageModule } from '@ionic/storage';
 import { AgendamentoDaoProvider } from '../providers/agendamento-dao/agendamento-dao';
 import { LoginPage } from '../pages/login/login';
 import { UsuariosServiceProvider } from '../providers/usuarios-service/usuarios-service';
 import { ApiServiceProvider } from '../providers/api-service/api-service';
-import { Vibration } from '@ionic-native/vibration';
-
+import { Vibration } from '@ionic-native/vibration/ngx';
+import { DatePicker } from '@ionic-native/date-picker/ngx';
 
 @NgModule({
   declarations: [
@@ -49,14 +49,14 @@ import { Vibration } from '@ionic-native/vibration';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
     CarrosServiceProvider,
     AgendamentosServiceProvider,
     AgendamentoDaoProvider,
     UsuariosServiceProvider,
     ApiServiceProvider,
+    DatePicker,
     Vibration
-    
   ]
 })
-export class AppModule {}
+export class AppModule { }
