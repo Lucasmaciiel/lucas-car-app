@@ -35,6 +35,9 @@ export class MyApp {
     this.nav.push(componente);
   }
 
+  get avatar(){
+    return this._usuariosService.obtemAvatar();
+  }
   get usuarioLogado(){
     return this._usuariosService.obtemUsuarioLogado();
   }

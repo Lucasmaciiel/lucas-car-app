@@ -23,6 +23,7 @@ import { UsuariosServiceProvider } from '../providers/usuarios-service/usuarios-
 import { ApiServiceProvider } from '../providers/api-service/api-service';
 import { Vibration } from '@ionic-native/vibration/ngx';
 import { DatePicker } from '@ionic-native/date-picker/ngx';
+import { Camera } from '@ionic-native/camera/ngx';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import { DatePicker } from '@ionic-native/date-picker/ngx';
     UsuariosServiceProvider,
     ApiServiceProvider,
     DatePicker,
-    Vibration
+    Vibration,
+    Camera
   ]
 })
 export class AppModule { }

@@ -34,6 +34,11 @@ npm start
 ionic cordova plugin add cordova-plugin-datepicker@0.9  --> instala plugin do datepicker
 npm install --save @ionic-native/date-picker
 
+ionic cordova plugin add cordova-plugin-camera@2.4.1 --> instala plugin da camera
+npm install --save @ionic-native/camera
+
+
+
 ionic cordova platform add android --> instala a plataforma android
 ionic cordova platform add ios --> instala a plataforma ios 
 
