@@ -1,62 +1,59 @@
-1º instale o ionic e o cordova
+1- instalação ionic e o cordova
 npm install -g ionic@3.16.0 cordova@7.0.1 --save-exact
 
-2º Verifica se está instalado, versões 
-ionic info  
-
+2- Verifica versões instaladas
+ionic info 
 versões
 node -v 
 npm -v
 
-3º Se der erro na instalação, Desinstale qualquer coisa referente ao Ionic ou Cordova executando:
+3- Se der erro na instalação, Desinstale qualquer coisa referente ao Ionic ou Cordova executando:
 npm uninstall -g ionic cordova 
 
-4º Para criar um projeto novo 
+4- Cria um projeto novo
 ionic start nome_do_projeto blank 
 
 ---------------------
-5º Baixar o projeto aluracar e acessar a pasta do projeto
+5- Baixar o projeto aluracar e acessar a pasta do projeto
 
-6º Para rodar o projeto
+6- Para rodar o app no navegador
 ionic serve --lab 
 
 npm install 
 
-7º Para gerar um provider --> provê serviços, ex: api 
+7- Gerar um provider --> provê serviços, ex: api 
 ionic g provider carros.service
 
-8º Gerar uma página
+8- Gerar uma página
 ionic g page nome_da_pagina
 
-9º rodar a API
+9- Rodar a API
 npm start
 
-ionic cordova plugin add cordova-plugin-datepicker@0.9  --> instala plugin do datepicker
+10- instala plugin do datepicker
+ionic cordova plugin add cordova-plugin-datepicker@0.9 
 npm install --save @ionic-native/date-picker
 
-ionic cordova plugin add cordova-plugin-camera@2.4.1 --> instala plugin da camera
+11- instala plugin da camera
+ionic cordova plugin add cordova-plugin-camera@2.4.1 --> 
 npm install --save @ionic-native/camera
-
-
 
 ionic cordova platform add android --> instala a plataforma android
 ionic cordova platform add ios --> instala a plataforma ios 
 
-ionic cordova build android  --> faz o build da aplicacao e gera o apk na pasta da plataforma
-ionic cordova build ios  --> (somente faz o build se estiver no mac)faz o build da aplicacao e gera o apk na pasta da plataforma
+12- Build da aplicacao e gera o apk na pasta da plataforma
+ionic cordova build android   
+ionic cordova build ios  --> (somente builda se estiver no mac)
 
-ionic cordova run android --> faz o build e instala direto no dispositivo 
-----------------
+13- faz o build e instala direto no dispositivo 
+ionic cordova run android --> 
+
 após criar uma página, ir no module, e criar um exports da mesma
-http://localhost:8080/api/carro/listaTodos
 
+
+http://localhost:8080/api/carro/listaTodos
 http://localhost:8100/ionic-lab
 
-10º subir projeto no github 
-dar o comando git remote add ...
-git push -u origin master
-
-=================
-# lucasCar
-Projeto em Ionic 
+=================================================================
+# lucasCar Projeto em Ionic 
 
