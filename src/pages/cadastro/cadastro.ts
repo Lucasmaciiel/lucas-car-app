@@ -31,23 +31,24 @@ export class CadastroPage {
     private _agendamentoDao: AgendamentoDaoProvider,
     private _vibration: Vibration,
     private _datePicker: DatePicker
-    ) {
+  ) {
     this.carro = this.navParams.get('carroSelecionado');
-    this.precoTotal =  this.navParams.get('precoTotal');
+    this.precoTotal = this.navParams.get('precoTotal');
   }
-  /*selecionaData(){
-      this._datePicker.show({
-      date: new Date(),
-      mode: 'date',
-      androidTheme: this._datePicker.ANDROID_THEMES.THEME_TRADITIONAL}).then ( data => this.data = data.toISOString());
-  } */
   selecionaData() {
     this._datePicker.show({
-        date: new Date(),
-        mode: 'date'
-    })
-    .then( data => this.data = data.toISOString() );
-}
+      date: new Date(),
+      mode: 'date',
+      androidTheme: this._datePicker.ANDROID_THEMES.THEME_TRADITIONAL
+    }).then(data => this.data = data.toISOString());
+  }
+  /* selecionaData() {
+     this._datePicker.show({
+         date: new Date(),
+         mode: 'date'
+     })
+     .then( data => this.data = data.toISOString() );
+ } */
   agenda() {
     if (!this.nome || !this.endereco || !this.email) {
       this._vibration.vibrate(500);
@@ -113,7 +114,7 @@ export class CadastroPage {
       );
   }
 
-  
+
 
 
 }
