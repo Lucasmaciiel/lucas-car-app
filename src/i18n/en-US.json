@@ -8,5 +8,11 @@
     "MENU": {
         "Agendamentos": "Schedules",
         "Perfil": "Profile"
+    },
+    "CADASTRO": {
+        "nome" : "Name:",
+        "endereco" : "Adress:",
+        "email" : "Email:",
+        "data ": "Date ingles"     
     }
 }

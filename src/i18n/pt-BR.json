@@ -8,5 +8,12 @@
     "MENU": {
         "Agendamentos": "Agendamentos",
         "Perfil": "Perfil"
+    },
+    "CADASTRO": {
+        "nome" : "Nome:",
+        "endereco" : "Endereço:",
+        "email" : "Email:",
+        "data ": "Data"     
     }
+
 }
