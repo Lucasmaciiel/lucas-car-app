@@ -5,7 +5,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { CarrosServiceProvider } from '../providers/carros-service/carros-service';
 import { AgendamentosServiceProvider } from '../providers/agendamentos-service/agendamentos-service';
 
@@ -24,6 +24,14 @@ import { ApiServiceProvider } from '../providers/api-service/api-service';
 import { Vibration } from '@ionic-native/vibration/ngx';
 import { DatePicker } from '@ionic-native/date-picker/ngx';
 import { Camera } from '@ionic-native/camera/ngx';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { HttpModule } from '@angular/http';
+import { Globalization } from '@ionic-native/globalization';
+
+export function createTranslateLoader(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
 
 @NgModule({
   declarations: [
@@ -32,8 +40,16 @@ import { Camera } from '@ionic-native/camera/ngx';
     LoginPage
   ],
   imports: [
+    HttpModule,
     BrowserModule,
     HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory:(createTranslateLoader),
+          deps: [HttpClient]
+      }
+    }),
     IonicModule.forRoot(MyApp),
     IonicStorageModule.forRoot({
       name: 'lucas-car',
@@ -58,7 +74,11 @@ import { Camera } from '@ionic-native/camera/ngx';
     ApiServiceProvider,
     DatePicker,
     Vibration,
-    Camera
+    Camera,
+    Globalization
   ]
 })
+ 
 export class AppModule { }
+
+

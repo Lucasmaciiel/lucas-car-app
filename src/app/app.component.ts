@@ -7,6 +7,8 @@ import { ListaAgendamentosPage } from '../pages/lista-agendamentos/lista-agendam
 import { LoginPage } from '../pages/login/login';
 import { PerfilPage } from '../pages/perfil/perfil';
 import { UsuariosServiceProvider } from '../providers/usuarios-service/usuarios-service';
+import { TranslateService } from '@ngx-translate/core';
+
 @Component({
   selector: 'myapp',
   templateUrl: 'app.html'
@@ -21,13 +23,23 @@ export class MyApp {
   ];
 
 
-  constructor(platform: Platform,
+  constructor(public translate: TranslateService,
+    platform: Platform,
     statusBar: StatusBar,
     splashScreen: SplashScreen,
     private _usuariosService: UsuariosServiceProvider) {
     platform.ready().then(() => {
       statusBar.styleDefault();
       splashScreen.hide();
+
+      translate.addLangs(["en-US", "pt-BR"]);
+      translate.setDefaultLang('pt-BR');
+      //translate.use('en-US');
+
+
+      let browserLang = translate.getBrowserLang();
+      translate.use(browserLang.match(/pt-BR|en-US/) ? browserLang : 'en-US');
+
     });
   }
 
@@ -35,12 +47,13 @@ export class MyApp {
     this.nav.push(componente);
   }
 
-  get avatar(){
+  get avatar() {
     return this._usuariosService.obtemAvatar();
   }
-  get usuarioLogado(){
+  get usuarioLogado() {
     return this._usuariosService.obtemUsuarioLogado();
   }
+
 
 
 

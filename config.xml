@@ -89,4 +89,5 @@
         <variable name="PHOTOLIBRARY_USAGE_DESCRIPTION" value=" " />
     </plugin>
     <plugin name="cordova-plugin-vibration" spec="~2.1.6" />
+    <plugin name="cordova-plugin-globalization" spec="~1.11.0" />
 </widget>

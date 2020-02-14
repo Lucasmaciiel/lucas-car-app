@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController, Alert } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { AgendamentoDaoProvider } from '../../providers/agendamento-dao/agendamento-dao';
 import { Agendamento } from '../home/modelos/agendamento';
 import { AgendamentosServiceProvider } from '../../providers/agendamentos-service/agendamentos-service';
@@ -64,7 +64,8 @@ export class ListaAgendamentosPage {
   }
 
   excluiAgendamento(agendamento: Agendamento) {
-    // implementar
+   //
   }
+
 
 }

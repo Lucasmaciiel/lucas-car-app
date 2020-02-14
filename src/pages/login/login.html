@@ -9,16 +9,16 @@
   <div padding>
     <form (ngSubmit)="efetuaLogin()">
       <ion-item>
-        <ion-label stacked>Email:</ion-label>
+        <ion-label stacked>{{ 'LOGIN.email' | translate }}</ion-label>
         <ion-input [(ngModel)]="email" name="email" type="text"></ion-input>
       </ion-item>
 
       <ion-item>
-        <ion-label stacked>Senha</ion-label>
+        <ion-label stacked>{{ 'LOGIN.senha' | translate }}</ion-label>
         <ion-input [(ngModel)]="senha" name="senha" type="password"></ion-input>
       </ion-item>
 
-      <button ion-button block type="submit" class="login">ENTRAR</button>
+      <button ion-button block type="submit" class="login">{{ 'LOGIN.entrar' | translate }}</button>
     </form>
   </div>
 
