@@ -48,6 +48,9 @@ ionic cordova build ios  --> (somente builda se estiver no mac)
 13- faz o build e instala direto no dispositivo 
 ionic cordova run android --> 
 
+14 - Roda direto no dispositivo  
+ionic cordova run android --device 
+
 após criar uma página, ir no module, e criar um exports da mesma
 
 

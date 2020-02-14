@@ -4,5 +4,9 @@
         "senha": "Senha",
         "entrar": "ENTRAR"   
     
+    },
+    "MENU": {
+        "Agendamentos": "Agendamentos",
+        "Perfil": "Perfil"
     }
 }

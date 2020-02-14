@@ -1,7 +1,12 @@
 {
     "LOGIN": {
-        "email": "Email Ingles:",
-        "senha": "Login Ingles",
-        "entrar": "OPEN Ingles"    
+        "email": "Email:",
+        "senha": "Login: ",
+        "entrar": "OPEN"         
+    },
+    
+    "MENU": {
+        "Agendamentos": "Schedules",
+        "Perfil": "Profile"
     }
 }

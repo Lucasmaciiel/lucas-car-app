@@ -36,7 +36,6 @@ export class MyApp {
       translate.setDefaultLang('pt-BR');
       //translate.use('en-US');
 
-
       let browserLang = translate.getBrowserLang();
       translate.use(browserLang.match(/pt-BR|en-US/) ? browserLang : 'en-US');
 
