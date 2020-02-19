@@ -21,7 +21,6 @@ import { AgendamentoDaoProvider } from '../providers/agendamento-dao/agendamento
 import { LoginPage } from '../pages/login/login';
 import { UsuariosServiceProvider } from '../providers/usuarios-service/usuarios-service';
 import { ApiServiceProvider } from '../providers/api-service/api-service';
-import { Vibration } from '@ionic-native/vibration/ngx';
 import { DatePicker } from '@ionic-native/date-picker/ngx';
 import { Camera } from '@ionic-native/camera/ngx';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
@@ -73,7 +72,6 @@ export function createTranslateLoader(http: HttpClient) {
     UsuariosServiceProvider,
     ApiServiceProvider,
     DatePicker,
-    Vibration,
     Camera,
     Globalization
   ]

@@ -10,9 +10,10 @@
         "Perfil": "Profile"
     },
     "CADASTRO": {
+        "cadastro":"Register",
         "nome" : "Name:",
         "endereco" : "Adress:",
         "email" : "Email:",
-        "data ": "Date ingles"     
+        "data": "Date"     
     }
 }

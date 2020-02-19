@@ -31,11 +31,10 @@ export class MyApp {
     platform.ready().then(() => {
       statusBar.styleDefault();
       splashScreen.hide();
-
-      translate.addLangs(["en-US", "pt-BR"]);
-      translate.setDefaultLang('pt-BR');
+         
+      //translate.addLangs(["en-US", "pt-BR"]); 
       //translate.use('en-US');
-
+      translate.setDefaultLang('pt-BR');
       let browserLang = translate.getBrowserLang();
       translate.use(browserLang.match(/pt-BR|en-US/) ? browserLang : 'en-US');
 

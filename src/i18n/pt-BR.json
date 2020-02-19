@@ -10,10 +10,11 @@
         "Perfil": "Perfil"
     },
     "CADASTRO": {
+        "cadastro":"Cadastro",
         "nome" : "Nome:",
         "endereco" : "Endereço:",
         "email" : "Email:",
-        "data ": "Data"     
+        "data": "Data"     
     }
 
 }

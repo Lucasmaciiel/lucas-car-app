@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { HomePage } from '../home/home';
 import { UsuariosServiceProvider } from '../../providers/usuarios-service/usuarios-service';
@@ -9,7 +9,8 @@ import { Usuario } from '../home/modelos/usuario';
   selector: 'page-login',
   templateUrl: 'login.html',
 })
-export class LoginPage {
+export class LoginPage  {
+
 
   email: string = 'joao@alura.com.br';
   senha: string = 'alura123';
