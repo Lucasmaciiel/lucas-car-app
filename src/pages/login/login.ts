@@ -1,6 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
-import { HomePage } from '../home/home';
 import { UsuariosServiceProvider } from '../../providers/usuarios-service/usuarios-service';
 import { Usuario } from '../home/modelos/usuario';
 
@@ -29,7 +28,7 @@ export class LoginPage  {
       .efetuaLogin(this.email, this.senha)
       .subscribe(
         (usuario: Usuario) => { // callback de sucesso
-          this.navCtrl.setRoot(HomePage);
+          this.navCtrl.setRoot('HomePage');
         },
         () => {
           this._alertCtrl.create({

@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController, Alert } from 'ionic-angular';
 import { Carro } from '../home/modelos/carro';
 import { AgendamentosServiceProvider } from '../../providers/agendamentos-service/agendamentos-service';
-import { HomePage } from '../home/home';
 import { Agendamento } from '../home/modelos/agendamento';
 import { AgendamentoDaoProvider } from '../../providers/agendamento-dao/agendamento-dao';
 import { Vibration } from '@ionic-native/vibration/ngx';
@@ -79,7 +78,7 @@ export class CadastroPage {
         {
           text: 'ok',
           handler: () => {
-            this.navCtrl.setRoot(HomePage);
+            this.navCtrl.setRoot('HomePage');
           }
         }
       ]

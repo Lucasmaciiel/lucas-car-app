@@ -4,7 +4,6 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { ListaAgendamentosPage } from '../pages/lista-agendamentos/lista-agendamentos';
-import { LoginPage } from '../pages/login/login';
 import { PerfilPage } from '../pages/perfil/perfil';
 import { UsuariosServiceProvider } from '../providers/usuarios-service/usuarios-service';
 import { TranslateService } from '@ngx-translate/core';
@@ -15,7 +14,7 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class MyApp {
   @ViewChild(Nav) public nav: Nav;
-  rootPage: any = LoginPage;
+  rootPage: any = 'LoginPage';
 
   public paginas = [
     { titulo: 'Agendamentos', componente: ListaAgendamentosPage.name, icone: 'calendar' },

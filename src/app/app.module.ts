@@ -4,7 +4,6 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { CarrosServiceProvider } from '../providers/carros-service/carros-service';
 import { AgendamentosServiceProvider } from '../providers/agendamentos-service/agendamentos-service';
@@ -18,7 +17,6 @@ import 'rxjs/add/operator/catch';
 
 import { IonicStorageModule } from '@ionic/storage';
 import { AgendamentoDaoProvider } from '../providers/agendamento-dao/agendamento-dao';
-import { LoginPage } from '../pages/login/login';
 import { UsuariosServiceProvider } from '../providers/usuarios-service/usuarios-service';
 import { ApiServiceProvider } from '../providers/api-service/api-service';
 import { DatePicker } from '@ionic-native/date-picker/ngx';
@@ -34,9 +32,7 @@ export function createTranslateLoader(http: HttpClient) {
 
 @NgModule({
   declarations: [
-    MyApp,
-    HomePage,
-    LoginPage
+    MyApp
   ],
   imports: [
     HttpModule,
@@ -58,9 +54,7 @@ export function createTranslateLoader(http: HttpClient) {
   ],
   bootstrap: [IonicApp],
   entryComponents: [
-    MyApp,
-    HomePage,
-    LoginPage
+    MyApp
   ],
   providers: [
     StatusBar,

@@ -4,7 +4,6 @@ import { Carro } from '../home/modelos/carro';
 import { Acessorio } from '../home/modelos/acessorio';
 import { CadastroPage } from '../cadastro/cadastro';
 
-
 @IonicPage()
 @Component({
   selector: 'page-escolha',
